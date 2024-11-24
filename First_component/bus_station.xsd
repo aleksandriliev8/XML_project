@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Types -->
+    <xs:simpleType name="FrequencyType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Daily"/>
+            <xs:enumeration value="Weekly"/>
+            <xs:enumeration value="Monthly"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="StopType">
+        <xs:attribute name="name" type="xs:string" use="required"/>
+        <xs:attribute name="type" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="ServiceType">
+        <xs:attribute name="name" type="xs:string" use="required"/>
+        <xs:attribute name="description" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="RouteType">
+        <xs:sequence>
+            <xs:element name="Stops">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="Stop" type="StopType" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:ID" use="required"/>
+        <xs:attribute name="destination" type="xs:string" use="required"/>
+        <xs:attribute name="frequency" type="FrequencyType" use="required"/>
+    </xs:complexType>
+
+    <!-- Main element -->
+    <xs:element name="BusStation">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Routes">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Route" type="RouteType" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Services">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Service" type="ServiceType" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="name" type="xs:string" use="required"/>
+            <xs:attribute name="location" type="xs:string" use="required"/>
+            <xs:attribute name="capacity" type="xs:positiveInteger" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

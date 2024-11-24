@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusStation name="Централна Автогара София" location="София, България" capacity="50" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="bus_station.xsd">
+    <Routes>
+        <Route id="R001" destination="Пловдив" frequency="hourly">
+            <Stops>
+                <Stop name="София Централна" type="автогара"/>
+                <Stop name="Пазарджик" type="спирка"/>
+                <Stop name="Пловдив Юг" type="автогара"/>
+            </Stops>
+        </Route>
+        <Route id="R002" destination="Варна" frequency="daily">
+            <Stops>
+                <Stop name="София Централна" type="автогара"/>
+                <Stop name="Велико Търново" type="спирка"/>
+                <Stop name="Варна Централна" type="автогара"/>
+            </Stops>
+        </Route>
+    </Routes>
+    <Services>
+        <Service name="Кафене" description="Топли напитки и закуски"/>
+        <Service name="Тоалетна" description="Безплатно за пътници"/>
+    </Services>
+</BusStation>
