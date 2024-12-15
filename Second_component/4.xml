@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusStations xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="bus_station.xsd">
+    <BusStation>
+        <name>Автогара Русе</name>
+        <location>Русе, България</location>
+        <capacity>20</capacity>
+        <manager>Ангел Иванов</manager>
+        <contactInfo>+359112244556</contactInfo>
+        <openingHours>07:00 - 20:00</openingHours>
+        <Routes>
+            <Route id="R005" destination="Силистра" frequency="Daily">
+                <Stops>
+                    <Stop name="Русе Централна" type="автогара">
+                        <StopDetails>Начална точка</StopDetails>
+                        <EstimatedTime>08:00:00</EstimatedTime>
+                    </Stop>
+                    <Stop name="Тутракан" type="спирка">
+                        <StopDetails>Междинна спирка</StopDetails>
+                        <EstimatedTime>09:30:00</EstimatedTime>
+                    </Stop>
+                    <Stop name="Силистра Централна" type="автогара">
+                        <StopDetails>Крайна точка</StopDetails>
+                        <EstimatedTime>10:30:00</EstimatedTime>
+                    </Stop>
+                </Stops>
+                <RouteManager>Михаил Георгиев</RouteManager>
+            </Route>
+        </Routes>
+        <Services>
+            <Service name="Магазин" description="Продукти за пътниците">
+                <ServiceHours>07:00 - 20:00</ServiceHours>
+                <ServiceProvider>Магазин Русе ООД</ServiceProvider>
+            </Service>
+        </Services>
+        <Amenities>
+            <Restrooms>true</Restrooms>
+            <Parking>false</Parking>
+            <Shops>true</Shops>
+        </Amenities>
+        <NearbyAttractions>"Пантеон на възрожденците", Кея на река Дунав</NearbyAttractions>
+    </BusStation>
+</BusStations>
