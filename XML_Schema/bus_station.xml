@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusStations xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="bus_station.xsd">
+    <BusStation>
+        <name>Централна Автогара София</name>
+        <location>София, България</location>
+        <capacity>50</capacity>
+        <manager>Иван Петров</manager>
+        <contactInfo>+359123456789</contactInfo>
+        <openingHours>06:00 - 22:00</openingHours>
+
+        <services>
+            <service>Кафене</service>
+            <service>Тоалетна</service>
+        </services>
+
+        <Routes>
+            <Route id="R001" destination="Пловдив" frequency="Hourly">
+                <Stops>
+                    <Stop name="София Централна" type="автогара">
+                        <StopDetails>Начална точка на маршрута</StopDetails>
+                        <EstimatedTime>20:00:00</EstimatedTime>
+                    </Stop>
+                    <Stop name="Пазарджик" type="спирка">
+                        <StopDetails>Междинна спирка</StopDetails>
+                        <EstimatedTime>21:30:00</EstimatedTime>
+                    </Stop>
+                    <Stop name="Пловдив Юг" type="автогара">
+                        <StopDetails>Крайна точка на маршрута</StopDetails>
+                        <EstimatedTime>22:30:00</EstimatedTime>
+                    </Stop>
+                </Stops>
+                <RouteManager>Георги Иванов</RouteManager>
+            </Route>
+            <Route id="R002" destination="Варна" frequency="Daily">
+                <Stops>
+                    <Stop name="София Централна" type="автогара">
+                        <StopDetails>Начална точка на маршрута</StopDetails>
+                        <EstimatedTime>10:00:00</EstimatedTime>
+                    </Stop>
+                    <Stop name="Велико Търново" type="спирка">
+                        <StopDetails>Междинна спирка</StopDetails>
+                        <EstimatedTime>13:30:00</EstimatedTime>
+                    </Stop>
+                    <Stop name="Варна Централна" type="автогара">
+                        <StopDetails>Крайна точка</StopDetails>
+                        <EstimatedTime>16:30:00</EstimatedTime>
+                    </Stop>
+                </Stops>
+                <RouteManager>Стефан Петров</RouteManager>
+            </Route>
+        </Routes>
+    </BusStation>
+</BusStations>
+

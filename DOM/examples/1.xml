@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusStations xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../XML_Schema/bus_station.xsd">
+    <BusStation>
+        <name>Централна Автогара София</name>
+        <location>София, България</location>
+        <capacity>50</capacity>
+        <manager>Иван Петров</manager>
+        <contactInfo>+359123456789, info@centralbus.bg</contactInfo>
+        <openingHours>06:00 - 22:00</openingHours>
+        <services>
+            <service>Билетен център</service>
+            <service>Кафе-ресторант</service>
+            <service>Чакалня</service>
+            <service>Безжичен интернет</service>
+        </services>
+        <Routes>
+            <Route id="R001" destination="Пловдив" frequency="Hourly">
+                <Stops>
+                    <Stop name="София Централна" type="автогара">
+                        <StopDetails>Начална точка на маршрута</StopDetails>
+                        <EstimatedTime>08:00:00</EstimatedTime>
+                    </Stop>
+                    <Stop name="Тракия Пловдив" type="спирка">
+                        <StopDetails>Междинна спирка</StopDetails>
+                        <EstimatedTime>10:00:00</EstimatedTime>
+                    </Stop>
+                </Stops>
+                <RouteManager>Георги Иванов</RouteManager>
+            </Route>
+            <Route id="R002" destination="Варна" frequency="Hourly">
+                <Stops>
+                    <Stop name="София Централна" type="автогара">
+                        <StopDetails>Начална точка на маршрута</StopDetails>
+                        <EstimatedTime>09:00:00</EstimatedTime>
+                    </Stop>
+                    <Stop name="Шумен Централна" type="автогара">
+                        <StopDetails>Междинна спирка</StopDetails>
+                        <EstimatedTime>13:00:00</EstimatedTime>
+                    </Stop>
+                    <Stop name="Варна Централна" type="автогара">
+                        <StopDetails>Крайна точка на маршрута</StopDetails>
+                        <EstimatedTime>15:00:00</EstimatedTime>
+                    </Stop>
+                </Stops>
+                <RouteManager>Мария Стоянова</RouteManager>
+            </Route>
+        </Routes>
+    </BusStation>
+
+    <BusStation>
+        <name>Автогара Пловдив</name>
+        <location>Пловдив, България</location>
+        <capacity>30</capacity>
+        <manager>Антон Димитров</manager>
+        <contactInfo>+359987654321, contact@plovdivbus.bg</contactInfo>
+        <openingHours>07:00 - 21:00</openingHours>
+        <services>
+            <service>Банкомат</service>
+            <service>Информационен център</service>
+        </services>
+        <Routes>
+            <Route id="R003" destination="Стара Загора" frequency="Daily">
+                <Stops>
+                    <Stop name="Пловдив Централна" type="автогара">
+                        <StopDetails>Начална точка на маршрута</StopDetails>
+                        <EstimatedTime>10:00:00</EstimatedTime>
+                    </Stop>
+                    <Stop name="Стара Загора Централна" type="автогара">
+                        <StopDetails>Крайна точка на маршрута</StopDetails>
+                        <EstimatedTime>12:30:00</EstimatedTime>
+                    </Stop>
+                </Stops>
+                <RouteManager>Светослав Николов</RouteManager>
+            </Route>
+        </Routes>
+    </BusStation>
+</BusStations>

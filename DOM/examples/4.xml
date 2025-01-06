@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusStations xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../XML_Schema/bus_station.xsd">
+    <BusStation>
+        <name>Автогара Русе</name>
+        <location>Русе, България</location>
+        <capacity>20</capacity>
+        <manager>Ангел Иванов</manager>
+        <contactInfo>+359112244556</contactInfo>
+        <openingHours>07:00 - 20:00</openingHours>
+        <services>
+            <service>Магазин</service>
+        </services>
+        <Routes>
+            <Route id="R005" destination="Силистра" frequency="Daily">
+                <Stops>
+                    <Stop name="Русе Централна" type="автогара">
+                        <StopDetails>Начална точка</StopDetails>
+                        <EstimatedTime>08:00:00</EstimatedTime>
+                    </Stop>
+                    <Stop name="Тутракан" type="спирка">
+                        <StopDetails>Междинна спирка</StopDetails>
+                        <EstimatedTime>09:30:00</EstimatedTime>
+                    </Stop>
+                    <Stop name="Силистра Централна" type="автогара">
+                        <StopDetails>Крайна точка</StopDetails>
+                        <EstimatedTime>10:30:00</EstimatedTime>
+                    </Stop>
+                </Stops>
+                <RouteManager>Михаил Георгиев</RouteManager>
+            </Route>
+        </Routes>
+    </BusStation>
+</BusStations>
+

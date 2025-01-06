@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:simpleType name="FrequencyType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Hourly"/>
+            <xs:enumeration value="Daily"/>
+            <xs:enumeration value="Weekly"/>
+            <xs:enumeration value="Monthly"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="StopType">
+        <xs:sequence>
+            <xs:element name="StopDetails" type="xs:string" />
+            <xs:element name="EstimatedTime" type="xs:time" />
+        </xs:sequence>
+        <xs:attribute name="name" type="xs:string" use="required"/>
+        <xs:attribute name="type" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="ServiceType">
+        <xs:sequence>
+            <xs:element name="ServiceHours" type="xs:string"/>
+            <xs:element name="ServiceProvider" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="name" type="xs:string" use="required"/>
+        <xs:attribute name="description" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="RouteType">
+        <xs:sequence>
+            <xs:element name="Stops">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="Stop" type="StopType" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="RouteManager" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:ID" use="required"/>
+        <xs:attribute name="destination" type="xs:string" use="required"/>
+        <xs:attribute name="frequency" type="FrequencyType" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="ServicesType">
+        <xs:sequence>
+            <xs:element name="service" type="xs:string" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="BusStations">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="BusStation" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="name" type="xs:string" />
+                            <xs:element name="location" type="xs:string" />
+                            <xs:element name="capacity" type="xs:positiveInteger" />
+                            <xs:element name="manager" type="xs:string" />
+                            <xs:element name="contactInfo" type="xs:string" />
+                            <xs:element name="openingHours" type="xs:string" />
+                            <xs:element name="services" type="ServicesType"/>
+                            <xs:element name="Routes">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="Route" type="RouteType" maxOccurs="unbounded"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
