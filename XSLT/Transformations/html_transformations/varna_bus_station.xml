@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../XSLT/HTML/stations_services.xslt"?>
+<BusStations xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../XML_Schema/bus_station.xsd">
+    <BusStation>
+        <name>Автогара Варна</name>
+        <location>Варна, България</location>
+        <capacity>40</capacity>
+        <manager>Стефан Костов</manager>
+        <contactInfo>+359987654321</contactInfo>
+        <openingHours>05:00 - 23:00</openingHours>
+        <services>
+            <service>Снек бар</service>
+        </services>
+
+        <Routes>
+            <Route id="R003" destination="Бургас" frequency="Daily">
+                <Stops>
+                    <Stop name="Варна Централна" type="автогара">
+                        <StopDetails>Начална точка</StopDetails>
+                        <EstimatedTime>07:00:00</EstimatedTime>
+                    </Stop>
+                    <Stop name="Обзор" type="спирка">
+                        <StopDetails>Междинна спирка</StopDetails>
+                        <EstimatedTime>08:30:00</EstimatedTime>
+                    </Stop>
+                    <Stop name="Бургас Юг" type="автогара">
+                        <StopDetails>Крайна точка</StopDetails>
+                        <EstimatedTime>10:00:00</EstimatedTime>
+                    </Stop>
+                </Stops>
+                <RouteManager>Ивайло Димитров</RouteManager>
+            </Route>
+        </Routes>
+    </BusStation>
+</BusStations>

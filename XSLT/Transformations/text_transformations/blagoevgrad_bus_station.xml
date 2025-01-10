@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusStations xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../XML_Schema/bus_station.xsd">
+    <BusStation>
+        <name>Автогара Благоевград</name>
+        <location>Благоевград, България</location>
+        <capacity>25</capacity>
+        <manager>Калоян Димитров</manager>
+        <contactInfo>+359123321456</contactInfo>
+        <openingHours>05:30 - 22:30</openingHours>
+        <services>
+            <service>Билетен център</service>
+        </services>
+        <Routes>
+            <Route id="R006" destination="Сандански" frequency="Hourly">
+                <Stops>
+                    <Stop name="Благоевград Централна" type="автогара">
+                        <StopDetails>Начална точка</StopDetails>
+                        <EstimatedTime>06:00:00</EstimatedTime>
+                    </Stop>
+                    <Stop name="Кресна" type="спирка">
+                        <StopDetails>Междинна спирка</StopDetails>
+                        <EstimatedTime>06:45:00</EstimatedTime>
+                    </Stop>
+                    <Stop name="Сандански Централна" type="автогара">
+                        <StopDetails>Крайна точка</StopDetails>
+                        <EstimatedTime>07:30:00</EstimatedTime>
+                    </Stop>
+                </Stops>
+                <RouteManager>Виктор Маринов</RouteManager>
+            </Route>
+        </Routes>
+    </BusStation>
+</BusStations>

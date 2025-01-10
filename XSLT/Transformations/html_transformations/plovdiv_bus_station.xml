@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../XSLT/HTML/stations_routes.xslt"?>
+<BusStations xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../XML_Schema/bus_station.xsd">
+    <BusStation>
+        <name>Автогара Пловдив</name>
+        <location>Пловдив, България</location>
+        <capacity>35</capacity>
+        <manager>Мария Колева</manager>
+        <contactInfo>+359112233445</contactInfo>
+        <openingHours>06:30 - 21:00</openingHours>
+        <services>
+            <service>Информация</service>
+        </services>
+
+        <Routes>
+            <Route id="R004" destination="Стара Загора" frequency="Hourly">
+                <Stops>
+                    <Stop name="Пловдив Юг" type="автогара">
+                        <StopDetails>Начална спирка</StopDetails>
+                        <EstimatedTime>08:00:00</EstimatedTime>
+                    </Stop>
+                    <Stop name="Чирпан" type="спирка">
+                        <StopDetails>Междинна спирка</StopDetails>
+                        <EstimatedTime>09:15:00</EstimatedTime>
+                    </Stop>
+                    <Stop name="Стара Загора Централна" type="автогара">
+                        <StopDetails>Крайна точка</StopDetails>
+                        <EstimatedTime>10:00:00</EstimatedTime>
+                    </Stop>
+                </Stops>
+                <RouteManager>Емил Петров</RouteManager>
+            </Route>
+        </Routes>
+    </BusStation>
+</BusStations>
