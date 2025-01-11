@@ -2,6 +2,8 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
     <xsl:output method="html" indent="yes" encoding="UTF-8"/>
 
+    <!--demonstrated with XSLT/Transformations/html_transformations/plovdiv_bus_station.xml-->
+
     <xsl:template match="/">
         <html>
             <head>
@@ -11,7 +13,7 @@
             <body>
                 <h1>Маршрути на автогарите</h1>
                 <xsl:for-each select="BusStations/BusStation">
-                    <div style="margin-bottom: 20px;">
+                    <div>
                         <h2><xsl:value-of select="name"/></h2>
                         <p><strong>Маршрути:</strong></p>
                         <ul>

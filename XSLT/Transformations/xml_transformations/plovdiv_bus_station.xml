@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<BusStations xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../XML_Schema/bus_station.xsd">
+<?xml-stylesheet type="text/xsl" href="../../XSLT/XML/station_information_to_xml.xslt"?>
+<BusStations xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../XML_Schema/bus_station.xsd">
     <BusStation>
         <name>Автогара Пловдив</name>
         <location>Пловдив, България</location>
