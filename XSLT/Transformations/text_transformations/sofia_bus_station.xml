@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="../../XSLT/HTML/stations_overview.xslt"?>
-<BusStations xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../XML_Schema/bus_station.xsd">
+<BusStations xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../XML_Schema/bus_station.xsd">
     <BusStation>
         <name>Централна Автогара София</name>
         <location>София, България</location>
